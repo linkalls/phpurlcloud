@@ -60,10 +60,10 @@
             <button type="submit" name="submit" class="w-full px-4 py-2 mt-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">アップロード</button>
         </form>
         <!-- プログレスバーのコンテナ -->
-         <div id="progressBarContainer" class="mt-4">
-             <div id="progressBar" class="w-32 h-32 rounded-full bg-gray-200"></div> 
-             <div id="progressText" class="text-center text-gray-700">0%</div> 
-         </div>
+         <!-- <div id="progressBarContainer" class="mt-4"> -->
+             <!-- <div id="progressBar" class="w-32 h-32 rounded-full bg-gray-200"></div>  -->
+             <!-- <div id="progressText" class="text-center text-gray-700">0%</div>  -->
+         <!-- </div> -->
         <div id="urlContainer" class="url-container">
             <input type="text" id="fileUrl" class="block w-full px-3 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" readonly>
             <button id="copyUrlBtn" class="w-full px-4 py-2 mt-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">URLコピー</button>

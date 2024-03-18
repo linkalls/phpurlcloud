@@ -50,22 +50,22 @@ function showMessage(message, type) {
               }
           }, false);
    
-          xhr.onload = function() {
-              if (xhr.status == 200) {
-                  var data = JSON.parse(xhr.responseText);
-                  if (data.success) {
-                      // アップロード成功時の処理
-                      document.getElementById('fileUrl').value = data.url; // URLをテキストボックスに設定
-                      document.getElementById('urlContainer').style.display = 'block';
-                      showMessage('ファイルがアップロードされました', 'success'); // 成功メッセージを表示
-                  } else {
-                      // アップロード失敗時の処理
-                      showMessage(data.message, 'error'); // エラーメッセージを表示
-                  }
-              } else {
-                  showMessage('エラーが発生しました', 'error'); // エラーメッセージを表示
-              }
-          };
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                var data = JSON.parse(xhr.responseText);
+                if (data.success) {
+                    // アップロード成功時の処理
+                    document.getElementById('fileUrl').value = data.url; // URLをテキストボックスに設定
+                    document.getElementById('urlContainer').style.display = 'block'; // urlContainerを表示
+                    showMessage('ファイルがアップロードされました', 'success'); // 成功メッセージを表示
+                } else {
+                    // アップロード失敗時の処理
+                    showMessage(data.message, 'error'); // エラーメッセージを表示
+                }
+            } else {
+                showMessage('エラーが発生しました', 'error'); // エラーメッセージを表示
+            }
+        };
    
           xhr.send(formData);
     });
